@@ -1,0 +1,9 @@
+﻿<Application x:Class="MedicoPlus_ver._1._0__Модуль_Реєстратура.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MedicoPlus_ver._1._0__Модуль_Реєстратура"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
