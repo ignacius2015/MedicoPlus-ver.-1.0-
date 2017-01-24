@@ -5,6 +5,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:col="clr-namespace:System.Collections;assembly=mscorlib" 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
     Title="МедікоПлюс. Електронна картка"
     Width="1024"
     Height="768"
@@ -524,6 +526,24 @@
                                 </ListView>
                             </Grid>
                         </GroupBox>
+                        <GroupBox x:Name="groupBox18" Header="Хірургічні втручання" HorizontalAlignment="Left" Margin="682,10,0,0" VerticalAlignment="Top" Height="142" Width="285">
+                            <Grid HorizontalAlignment="Left" Height="121" VerticalAlignment="Top" Width="275" Margin="0,0,-2,-1">
+                                <ListView x:Name="listView2" HorizontalAlignment="Left" Height="108" VerticalAlignment="Top" Width="275" Margin="0,3,0,0">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Width="102" DisplayMemberBinding="{Binding Path=Title}">Дата</GridViewColumn>
+                                            <GridViewColumn Width="165" DisplayMemberBinding="{Binding Path=Title}">Діагноз</GridViewColumn>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox x:Name="groupBox19" Header="Алергологічний анамнез" HorizontalAlignment="Left" Margin="180,157,0,0" VerticalAlignment="Top" Width="345" Height="210">
+                            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="5,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="325" Height="173"/>
+                        </GroupBox>
+                        <GroupBox x:Name="groupBox20" Header="Непереносимість лікарських препаратів, фактори ризику" HorizontalAlignment="Left" Margin="561,157,0,0" VerticalAlignment="Top" Height="210" Width="406">
+                            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="3,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="387" Height="172"/>
+                        </GroupBox>
 
                     </Grid>
                 </TabItem.Content>
@@ -542,7 +562,7 @@
                 </HeaderedContentControl.Header>
             </TabItem>
             <TabItem>
-                <HeaderedContentControl.Header>
+                <TabItem.Header>
                     <StackPanel Height="35" Orientation="Horizontal">
                         <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
                             Відомості
@@ -550,7 +570,37 @@
                             про щеплення
                         </TextBlock>
                     </StackPanel>
-                </HeaderedContentControl.Header>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <DataGrid GridLinesVisibility="All" AutoGenerateColumns="False" x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="303" Width="1000" Margin="5,3,0,0">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Найменування щеплення" Binding="{Binding Path=Title}" Width="160" />
+                                <DataGridTextColumn Header="Дата" Binding="{Binding Path=Title}" Width="100" />
+                                <DataGridTextColumn Header="Вік" Binding="{Binding Path=Title}" Width="50" />
+                                <DataGridTextColumn Header="Доза" Binding="{Binding Path=Title}" Width="60" />
+                                <DataGridTextColumn Header="Серія" Binding="{Binding Path=Title}" Width="60" />
+                                <DataGridTextColumn Header="Назва препарату" Binding="{Binding Path=Title}" Width="120" />
+                                <DataGridComboBoxColumn Header="Способ введення" SelectedItemBinding="{Binding Path=CategoryName}" Width="120">
+                                    <DataGridComboBoxColumn.ItemsSource>
+                                        <col:ArrayList>
+                                            <sys:String>накожний</sys:String>
+                                            <sys:String>внутрішньошкірний</sys:String>
+                                            <sys:String>підшкірний</sys:String>
+                                            <sys:String>внутрішньом'язовий</sys:String>
+                                            <sys:String>аерозольний</sys:String>
+                                            <sys:String>пероральний</sys:String>
+                                        </col:ArrayList>
+                                    </DataGridComboBoxColumn.ItemsSource>
+                                </DataGridComboBoxColumn>
+                                <DataGridTextColumn Header="місцева реакція" Binding="{Binding Path=Title}" Width="100" />
+                                <DataGridTextColumn Header="загальна реакція" Binding="{Binding Path=Title}" Width="110" />
+                                <DataGridTextColumn Header="протипоказання" Binding="{Binding Path=Title}" Width="100" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </Grid>
+                </TabItem.Content>
             </TabItem>
             <TabItem>
                 <HeaderedContentControl.Header>
