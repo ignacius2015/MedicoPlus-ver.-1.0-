@@ -10,6 +10,477 @@
     Height="768"
     mc:Ignorable="d">
     <Grid>
-        
+        <TabControl
+            x:Name="tabControl"
+            Height="735"
+            Margin="0,0,0,2">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Height="35">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="Wrap">
+                            Загальні
+                            <LineBreak />
+                            відомості
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid Margin="0,0,0,0">
+                        <Label
+                            x:Name="label"
+                            Height="23"
+                            Margin="224,10,460,576"
+                            Content="МЕДИЧНА КАРТА АМБУЛАТОРНОГО ХВОРОГО №"
+                            FontWeight="Bold" />
+                        <TextBox
+                            x:Name="textBox"
+                            Height="23"
+                            Margin="533,12,360,574"
+                            Text="TextBox"
+                            TextWrapping="Wrap" />
+                        <GroupBox
+                            x:Name="groupBox"
+                            Width="295"
+                            Height="53"
+                            Margin="10,53,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Прізвище">
+                            <TextBox
+                                x:Name="textBox1"
+                                Width="267"
+                                Height="23"
+                                Margin="9,6,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox1"
+                            Width="295"
+                            Height="53"
+                            Margin="10,122,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Ім'я"
+                            RenderTransformOrigin="0.521,0.609">
+                            <TextBox
+                                x:Name="textBox2"
+                                Width="266"
+                                Height="23"
+                                Margin="9,4,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox2"
+                            Width="295"
+                            Height="51"
+                            Margin="10,189,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="По батькові">
+                            <TextBox
+                                x:Name="textBox3"
+                                Width="265"
+                                Height="23"
+                                Margin="8,4,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox3"
+                            Width="91"
+                            Height="64"
+                            Margin="333,53,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Стать">
+                            <StackPanel
+                                Width="91"
+                                Margin="0,-3"
+                                HorizontalAlignment="Left">
+                                <RadioButton
+                                    x:Name="radioButton1"
+                                    Margin="0,5,0,0"
+                                    Content="Чоловік" />
+                                <RadioButton
+                                    x:Name="radioButton"
+                                    Margin="0,5,10,0"
+                                    Content="Жінка" />
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox4"
+                            Width="222"
+                            Height="64"
+                            Margin="453,53,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Дата народження">
+                            <DatePicker
+                                Width="177"
+                                Height="22"
+                                Margin="15,9,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox5"
+                            Width="342"
+                            Height="119"
+                            Margin="333,121,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Місце проживання хворого">
+                            <TextBlock
+                                x:Name="textBlock"
+                                Width="329"
+                                Height="87"
+                                Margin="3,3,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBlock"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox6"
+                            Width="195"
+                            Height="53"
+                            Margin="699,53,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Телефон хворого">
+                            <TextBox
+                                x:Name="textBox4"
+                                Width="170"
+                                Height="23"
+                                Margin="5,5,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox7"
+                            Width="276"
+                            Height="120"
+                            Margin="700,120,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Місце роботи та посада">
+                            <TextBlock
+                                x:Name="textBlock1"
+                                Width="251"
+                                Height="90"
+                                Margin="4,5,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBlock"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox8"
+                            Width="124"
+                            Height="70"
+                            Margin="247,288,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Діспансерна група">
+                            <StackPanel
+                                Width="114"
+                                Height="52"
+                                Margin="0,0,-2,-4"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <RadioButton
+                                    x:Name="radioButton2"
+                                    Margin="2,5,41,0"
+                                    Content="Так" />
+                                <RadioButton
+                                    x:Name="radioButton3"
+                                    Margin="2,5,53,0"
+                                    Content="Ні" />
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox9"
+                            Width="231"
+                            Height="56"
+                            Margin="6,259,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Контингент">
+                            <ComboBox
+                                x:Name="comboBox"
+                                Width="198"
+                                Margin="10,4,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox10"
+                            Width="205"
+                            Height="56"
+                            Margin="9,333,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Номер пільгового посвідчення">
+                            <TextBox
+                                x:Name="textBox5"
+                                Width="176"
+                                Height="23"
+                                Margin="10,6,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox11"
+                            Width="503"
+                            Height="99"
+                            Margin="391,259,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Взятий(а) на облік">
+                            <Grid
+                                Width="493"
+                                Height="74"
+                                Margin="0,0,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <DatePicker
+                                    Width="120"
+                                    Margin="11,6,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                                <Label
+                                    x:Name="label1"
+                                    Width="75"
+                                    Margin="139,5,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="з приводу" />
+                                <TextBox
+                                    x:Name="textBox6"
+                                    Width="264"
+                                    Height="23"
+                                    Margin="219,9,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                                <DatePicker
+                                    Width="120"
+                                    Margin="11,39,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                                <Label
+                                    x:Name="label1_Copy"
+                                    Width="75"
+                                    Margin="139,38,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="з приводу" />
+                                <TextBox
+                                    x:Name="textBox6_Copy"
+                                    Width="264"
+                                    Height="23"
+                                    Margin="219,42,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox12"
+                            Width="503"
+                            Height="89"
+                            Margin="391,375,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Знятий(а) з обліку">
+                            <Grid
+                                Width="493"
+                                Height="74"
+                                Margin="0,0,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <DatePicker
+                                    Width="120"
+                                    Margin="11,6,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                                <Label
+                                    x:Name="label2"
+                                    Width="75"
+                                    Margin="139,5,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="причина" />
+                                <TextBox
+                                    x:Name="textBox7"
+                                    Width="264"
+                                    Height="23"
+                                    Margin="219,9,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                                <DatePicker
+                                    Width="120"
+                                    Margin="11,39,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                                <Label
+                                    x:Name="label1_Copy1"
+                                    Width="75"
+                                    Margin="139,38,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="причина" />
+                                <TextBox
+                                    x:Name="textBox6_Copy1"
+                                    Width="264"
+                                    Height="23"
+                                    Margin="219,42,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                            </Grid>
+                        </GroupBox>
+
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <HeaderedContentControl.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Сигнальні
+                            <LineBreak />
+                            позначки
+                        </TextBlock>
+                    </StackPanel>
+                </HeaderedContentControl.Header>
+            </TabItem>
+            <TabItem>
+                <HeaderedContentControl.Header>
+                    <StackPanel Height="55" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Листок запису
+                            <LineBreak />
+                            заключних(уточнених)
+                            <LineBreak />
+                            діагнозів
+                        </TextBlock>
+                    </StackPanel>
+                </HeaderedContentControl.Header>
+            </TabItem>
+            <TabItem>
+                <HeaderedContentControl.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Відомості
+                            <LineBreak />
+                            про щеплення
+                        </TextBlock>
+                    </StackPanel>
+                </HeaderedContentControl.Header>
+            </TabItem>
+            <TabItem>
+                <HeaderedContentControl.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Листок профілак-
+                            <LineBreak />
+                            тичного огляду
+                        </TextBlock>
+                    </StackPanel>
+                </HeaderedContentControl.Header>
+            </TabItem>
+            <TabItem>
+                <HeaderedContentControl.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Строки тимчасової
+                            <LineBreak />
+                            непрацездатності
+                        </TextBlock>
+                    </StackPanel>
+                </HeaderedContentControl.Header>
+            </TabItem>
+            <TabItem>
+                <HeaderedContentControl.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Інформація про
+                            <LineBreak />
+                            госпіталізацію
+                        </TextBlock>
+                    </StackPanel>
+                </HeaderedContentControl.Header>
+            </TabItem>
+            <TabItem>
+                <HeaderedContentControl.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Відомості щодо
+                            <LineBreak />
+                            страхування
+                        </TextBlock>
+                    </StackPanel>
+                </HeaderedContentControl.Header>
+            </TabItem>
+            <TabItem>
+                <HeaderedContentControl.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">Щоденник</TextBlock>
+                    </StackPanel>
+                </HeaderedContentControl.Header>
+            </TabItem>
+            <TabItem>
+                <HeaderedContentControl.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Дані профилак-
+                            <LineBreak />
+                            тичного огляду
+                        </TextBlock>
+                    </StackPanel>
+                </HeaderedContentControl.Header>
+            </TabItem>
+            <TabItem>
+                <HeaderedContentControl.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Щорічний епікриз на
+                            <LineBreak />
+                            диспансерного хворого
+                        </TextBlock>
+                    </StackPanel>
+                </HeaderedContentControl.Header>
+            </TabItem>
+            <TabItem>
+                <HeaderedContentControl.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            План спостереження
+                            <LineBreak />
+                            на наступний рік
+                        </TextBlock>
+                    </StackPanel>
+                </HeaderedContentControl.Header>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
+

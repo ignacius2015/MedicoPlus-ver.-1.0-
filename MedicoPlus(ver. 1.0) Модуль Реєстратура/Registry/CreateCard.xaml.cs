@@ -22,6 +22,7 @@ namespace MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry
         public CreateCard()
         {
             InitializeComponent();
+            
         }
     }
 }
