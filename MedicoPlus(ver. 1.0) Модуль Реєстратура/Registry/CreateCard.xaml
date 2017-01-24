@@ -357,12 +357,11 @@
                                     TextWrapping="Wrap" />
                             </Grid>
                         </GroupBox>
-
                     </Grid>
                 </TabItem.Content>
             </TabItem>
             <TabItem>
-                <HeaderedContentControl.Header>
+                <TabItem.Header>
                     <StackPanel Height="35" Orientation="Horizontal">
                         <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
                             Сигнальні
@@ -370,7 +369,164 @@
                             позначки
                         </TextBlock>
                     </StackPanel>
-                </HeaderedContentControl.Header>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <GroupBox
+                            x:Name="groupBox13"
+                            Width="143"
+                            Height="52"
+                            Margin="10,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="група крові">
+                            <TextBox
+                                x:Name="textBox8"
+                                Width="120"
+                                Height="23"
+                                Margin="7,5,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox14"
+                            Width="142"
+                            Height="75"
+                            Margin="11,64,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="резус-фактор">
+                            <Grid
+                                Width="105"
+                                Height="54"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <RadioButton
+                                    x:Name="radioButton4"
+                                    Width="99"
+                                    Margin="10,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="позитивний" />
+                                <RadioButton
+                                    x:Name="radioButton5"
+                                    Margin="10,31,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="негативний" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox15"
+                            Width="142"
+                            Height="127"
+                            Margin="11,144,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="цукровий діабет">
+                            <Grid
+                                Width="132"
+                                Height="102"
+                                Margin="0,0,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <RadioButton
+                                    x:Name="radioButton6"
+                                    Width="99"
+                                    Margin="10,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="так" />
+                                <RadioButton
+                                    x:Name="radioButton7"
+                                    Margin="10,81,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="ні" />
+                                <TextBox
+                                    x:Name="textBox9"
+                                    Width="122"
+                                    Height="23"
+                                    Margin="0,51,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                                <Label
+                                    x:Name="label3"
+                                    Width="90"
+                                    Margin="5,26,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="діагноз"
+                                    RenderTransformOrigin="0.526,0.5" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox16"
+                            Width="234"
+                            Height="142"
+                            Margin="180,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Переливання крові (коли, скільки)">
+                            <Grid
+                                Width="210"
+                                Height="111"
+                                Margin="6,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <ListView
+                                    x:Name="listView"
+                                    Width="205"
+                                    Height="95"
+                                    Margin="1,2,0,-2"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Title}">Дата</GridViewColumn>
+                                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Title}">Кількість</GridViewColumn>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox17"
+                            Width="221"
+                            Height="142"
+                            Margin="442,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Інфекційні захворювання">
+                            <Grid
+                                Width="211"
+                                Height="123"
+                                Margin="0,0,-2,-3"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <ListView
+                                    x:Name="listView1"
+                                    Width="205"
+                                    Height="113"
+                                    Margin="1,0,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Title}">Дата</GridViewColumn>
+                                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Title}">Діагноз</GridViewColumn>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </Grid>
+                        </GroupBox>
+
+                    </Grid>
+                </TabItem.Content>
             </TabItem>
             <TabItem>
                 <HeaderedContentControl.Header>
