@@ -699,7 +699,24 @@
                     </StackPanel>
                 </TabItem.Header>
                 <TabItem.Content>
-                    <Grid />
+                    <Grid>
+                        <ListView
+                            x:Name="listView42_2"
+                            Width="1000"
+                            Height="108"
+                            Margin="5,3,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Width="420" DisplayMemberBinding="{Binding Path=Title}">Найменування обстеження</GridViewColumn>
+                                    <GridViewColumn Width="160" DisplayMemberBinding="{Binding Path=Title}">дата проведення</GridViewColumn>
+                                    <GridViewColumn Width="255" DisplayMemberBinding="{Binding Path=Title}">Висновок</GridViewColumn>
+                                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding Path=Title}">Лікар</GridViewColumn>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Grid>
                 </TabItem.Content>
             </TabItem>
             <TabItem>
@@ -720,15 +737,37 @@
                             Height="385"
                             Margin="10,10,0,0"
                             HorizontalAlignment="Left"
-                            VerticalAlignment="Top">
-                            <DataGrid.Columns />
+                            VerticalAlignment="Top"
+                            AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn
+                                    Width="150"
+                                    Binding="{Binding Path=Title}"
+                                    Header="Номер листка" />
+                                <DataGridTextColumn
+                                    Width="150"
+                                    Binding="{Binding Path=Title}"
+                                    Header="Дата видачі" />
+                                <DataGridTextColumn
+                                    Width="150"
+                                    Binding="{Binding Path=Title}"
+                                    Header="Дата закриття" />
+                                <DataGridTextColumn
+                                    Width="400"
+                                    Binding="{Binding Path=Title}"
+                                    Header="Заключний діагноз" />
+                                <DataGridTextColumn
+                                    Width="150"
+                                    Binding="{Binding Path=Title}"
+                                    Header="Лікар" />
+                            </DataGrid.Columns>
                         </DataGrid>
 
                     </Grid>
                 </TabItem.Content>
             </TabItem>
             <TabItem>
-                <HeaderedContentControl.Header>
+                <TabItem.Header>
                     <StackPanel Height="35" Orientation="Horizontal">
                         <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
                             Інформація про
@@ -736,10 +775,32 @@
                             госпіталізацію
                         </TextBlock>
                     </StackPanel>
-                </HeaderedContentControl.Header>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <ListView
+                            x:Name="listView2_2"
+                            Width="1000"
+                            Height="108"
+                            Margin="5,3,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Width="135" DisplayMemberBinding="{Binding Path=Title}">Дата</GridViewColumn>
+                                    <GridViewColumn Width="320" DisplayMemberBinding="{Binding Path=Title}">
+                                        Найменування
+                                        закладу охорони здоров’я, відділення
+                                    </GridViewColumn>
+                                    <GridViewColumn Width="535" DisplayMemberBinding="{Binding Path=Title}">Заключний діагноз</GridViewColumn>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Grid>
+                </TabItem.Content>
             </TabItem>
             <TabItem>
-                <HeaderedContentControl.Header>
+                <TabItem.Header>
                     <StackPanel Height="35" Orientation="Horizontal">
                         <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
                             Відомості щодо
@@ -747,14 +808,39 @@
                             страхування
                         </TextBlock>
                     </StackPanel>
-                </HeaderedContentControl.Header>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <ListView
+                            x:Name="listView26_2"
+                            Width="1000"
+                            Height="108"
+                            Margin="5,3,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Width="135" DisplayMemberBinding="{Binding Path=Title}">Дата</GridViewColumn>
+                                    <GridViewColumn Width="320" DisplayMemberBinding="{Binding Path=Title}">
+                                        Найменування
+                                        закладу охорони здоров’я, відділення
+                                    </GridViewColumn>
+                                    <GridViewColumn Width="535" DisplayMemberBinding="{Binding Path=Title}">Заключний діагноз</GridViewColumn>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Grid>
+                </TabItem.Content>
             </TabItem>
             <TabItem>
-                <HeaderedContentControl.Header>
+                <TabItem.Header>
                     <StackPanel Height="35" Orientation="Horizontal">
                         <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">Щоденник</TextBlock>
                     </StackPanel>
-                </HeaderedContentControl.Header>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid />
+                </TabItem.Content>
             </TabItem>
             <TabItem>
                 <HeaderedContentControl.Header>
