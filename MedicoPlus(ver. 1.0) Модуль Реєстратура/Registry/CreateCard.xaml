@@ -839,11 +839,29 @@
                     </StackPanel>
                 </TabItem.Header>
                 <TabItem.Content>
-                    <Grid />
+                    <Grid>
+                        <ListView
+                            x:Name="listView26_42"
+                            Width="1000"
+                            Height="108"
+                            Margin="5,3,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding Path=Title}">Дата звернення</GridViewColumn>
+                                    <GridViewColumn Width="180" DisplayMemberBinding="{Binding Path=Title}">Місце проведення лікування</GridViewColumn>
+                                    <GridViewColumn Width="320" DisplayMemberBinding="{Binding Path=Title}">Скарги хворого, об’єктивні дані, діагноз, перебіг хвороби</GridViewColumn>
+                                    <GridViewColumn Width="240" DisplayMemberBinding="{Binding Path=Title}">Призначення</GridViewColumn>
+                                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding Path=Title}">лікар</GridViewColumn>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Grid>
                 </TabItem.Content>
             </TabItem>
             <TabItem>
-                <HeaderedContentControl.Header>
+                <TabItem.Header>
                     <StackPanel Height="35" Orientation="Horizontal">
                         <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
                             Дані профилак-
@@ -851,10 +869,13 @@
                             тичного огляду
                         </TextBlock>
                     </StackPanel>
-                </HeaderedContentControl.Header>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid />
+                </TabItem.Content>
             </TabItem>
             <TabItem>
-                <HeaderedContentControl.Header>
+                <TabItem.Header>
                     <StackPanel Height="35" Orientation="Horizontal">
                         <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
                             Щорічний епікриз на
@@ -862,10 +883,13 @@
                             диспансерного хворого
                         </TextBlock>
                     </StackPanel>
-                </HeaderedContentControl.Header>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid />
+                </TabItem.Content>
             </TabItem>
             <TabItem>
-                <HeaderedContentControl.Header>
+                <TabItem.Header>
                     <StackPanel Height="35" Orientation="Horizontal">
                         <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
                             План спостереження
@@ -873,7 +897,10 @@
                             на наступний рік
                         </TextBlock>
                     </StackPanel>
-                </HeaderedContentControl.Header>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid />
+                </TabItem.Content>
             </TabItem>
         </TabControl>
     </Grid>
