@@ -871,7 +871,83 @@
                     </StackPanel>
                 </TabItem.Header>
                 <TabItem.Content>
-                    <Grid />
+                    <Grid>
+                        <ListView
+                            x:Name="listView264_42"
+                            Width="1000"
+                            Height="108"
+                            Margin="5,3,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding Path=Title}">Дата</GridViewColumn>
+                                    <GridViewColumn Width="320" DisplayMemberBinding="{Binding Path=Title}">Вид обстеження</GridViewColumn>
+                                    <GridViewColumn Width="240" DisplayMemberBinding="{Binding Path=Title}">Результат</GridViewColumn>
+                                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding Path=Title}">лікар</GridViewColumn>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <GroupBox
+                            x:Name="groupBox21"
+                            Width="323"
+                            Height="194"
+                            Margin="10,137,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            FontWeight="Bold"
+                            Header="Дані лабораторних інструментальних досліджень">
+                            <Grid
+                                Width="308"
+                                Height="127"
+                                Margin="0,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <GroupBox
+                                    x:Name="groupBox22"
+                                    Width="195"
+                                    Height="52"
+                                    Margin="13,5,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    FontWeight="Normal"
+                                    Header="Дата дослідження">
+                                    <DatePicker
+                                        Width="158"
+                                        Height="24"
+                                        Margin="14,3,0,0"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Top" />
+                                </GroupBox>
+                                <GroupBox
+                                    x:Name="groupBox23"
+                                    Width="195"
+                                    Height="46"
+                                    Margin="13,71,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    FontWeight="Normal"
+                                    Header="Вид дослідження">
+                                    <ComboBox
+                                        x:Name="comboBox1"
+                                        Width="173"
+                                        Margin="4,0,0,0"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Top" />
+                                </GroupBox>
+                                <Button
+                                    x:Name="button"
+                                    Width="85"
+                                    Height="46"
+                                    Margin="213,49,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Сформувати" />
+
+                            </Grid>
+                        </GroupBox>
+
+                    </Grid>
                 </TabItem.Content>
             </TabItem>
             <TabItem>
@@ -885,7 +961,24 @@
                     </StackPanel>
                 </TabItem.Header>
                 <TabItem.Content>
-                    <Grid />
+                    <Grid>
+                        <GroupBox
+                            x:Name="groupBox24"
+                            Width="156"
+                            Height="55"
+                            Margin="10,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Дата">
+                            <DatePicker
+                                Width="121"
+                                Height="25"
+                                Margin="10,4,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top" />
+                        </GroupBox>
+
+                    </Grid>
                 </TabItem.Content>
             </TabItem>
             <TabItem>
