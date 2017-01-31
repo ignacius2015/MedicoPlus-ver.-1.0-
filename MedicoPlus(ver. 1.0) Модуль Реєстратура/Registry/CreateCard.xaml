@@ -7,7 +7,7 @@
     xmlns:local="clr-namespace:MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
-    Title="МедікоПлюс. Електронна картка"
+    Title="МедікоПлюс. МЕДИЧНА КАРТА АМБУЛАТОРНОГО ХВОРОГО"
     Width="1024"
     Height="768"
     mc:Ignorable="d">

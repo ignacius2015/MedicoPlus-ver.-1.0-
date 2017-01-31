@@ -15,24 +15,13 @@ using System.Windows.Shapes;
 namespace MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry
 {
     /// <summary>
-    /// Interaction logic for Shell.xaml
+    /// Interaction logic for CreateStc.xaml
     /// </summary>
-    public partial class Shell : Window
+    public partial class CreateStc : Window
     {
-        public Shell()
+        public CreateStc()
         {
             InitializeComponent();
-        }
-
-        private void CreateCard_Click(object sender, RoutedEventArgs e)
-        {
-            CreateCard create= new CreateCard();
-            create.Show();
-        }
-
-        private void CreateStac_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

@@ -57,12 +57,19 @@
                     Height="50"
                     Margin="5,5,5,5"
                     Click="CreateCard_Click"
-                    Content="Розпочати картку" />
+                    Content="Розпочати амбулаторну картку" />
+                <Button
+                    x:Name="CreateStac"
+                    Height="50"
+                    Margin="5,5,5,5"
+                    Click="CreateStac_Click"
+                    Content="Розпочати стаціонарну картку" />
                 <Button
                     x:Name="SearchCard"
                     Height="50"
                     Margin="5,5,5,5"
                     Content="Пошук картки" />
+
             </StackPanel>
         </ItemsControl>
     </Grid>

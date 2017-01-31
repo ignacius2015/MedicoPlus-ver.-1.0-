@@ -1,0 +1,1162 @@
+﻿<Window
+    x:Class="MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry.CreateStc"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Title="МедікоПлюс. МЕДИЧНА КАРТА СТАЦІОНАРНОГО ХВОРОГО"
+    Width="1024"
+    Height="768"
+    mc:Ignorable="d">
+    <Grid>
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Height="35">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="Wrap">
+                            Загальні
+                            <LineBreak />
+                            відомості
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid Margin="0,0,-3,0">
+                        <Label
+                            x:Name="label"
+                            Width="306"
+                            Margin="261,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="МЕДИЧНА КАРТА СТАЦІОНАРНОГО ХВОРОГО №"
+                            FontWeight="Bold" />
+                        <TextBox
+                            x:Name="number"
+                            Width="76"
+                            Height="23"
+                            Margin="567,13,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text="TextBox"
+                            TextWrapping="Wrap" />
+                        <GroupBox
+                            x:Name="groupBox"
+                            Width="208"
+                            Height="68"
+                            Margin="10,36,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Госпіталізація">
+                            <DatePicker
+                                Width="163"
+                                Margin="10,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox1"
+                            Width="184"
+                            Height="69"
+                            Margin="234,35,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Відділення">
+                            <ComboBox
+                                x:Name="comboBox"
+                                Width="152"
+                                Margin="10,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox2"
+                            Width="78"
+                            Height="69"
+                            Margin="427,35,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="палата">
+                            <TextBox
+                                x:Name="textBox"
+                                Width="65"
+                                Height="23"
+                                Margin="0,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox3"
+                            Width="271"
+                            Height="164"
+                            Margin="517,34,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Переводи">
+
+                            <DataGrid
+                                x:Name="dataGrid"
+                                Width="258"
+                                Height="138"
+                                Margin="3,3,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                AutoGenerateColumns="False"
+                                GridLinesVisibility="All">
+                                <DataGrid.Columns>
+                                    <DataGridComboBoxColumn Width="300" Header="Відділення" />
+                                    <DataGridTemplateColumn Header="Дата">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <DatePicker BorderThickness="0" SelectedDate="{Binding Дата}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox4"
+                            Width="203"
+                            Height="71"
+                            Margin="797,33,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Виписка (смерть)&#xD;&#xA;">
+                            <DatePicker
+                                Width="163"
+                                Margin="12,-1,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox5"
+                            Width="219"
+                            Height="122"
+                            Margin="794,109,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="в поточному році з приводу даної&#xD;&#xA; хвороби госпіталізований&#xD;&#xA;">
+                            <Grid
+                                Width="180"
+                                Height="68"
+                                Margin="4,0,0,-1"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <RadioButton
+                                    x:Name="radioButton"
+                                    Margin="10,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="вперше"
+                                    GroupName="prv" />
+                                <RadioButton
+                                    x:Name="radioButton1"
+                                    Margin="10,35,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="повторно"
+                                    GroupName="prv" />
+
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox6"
+                            Width="147"
+                            Height="56"
+                            Margin="10,109,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Проведено ліжко-днів">
+                            <TextBox
+                                x:Name="textBox1"
+                                Width="120"
+                                Height="23"
+                                Margin="8,7,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox7"
+                            Width="87"
+                            Height="56"
+                            Margin="171,109,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Група крові">
+                            <TextBox
+                                x:Name="textBox2"
+                                Width="55"
+                                Height="23"
+                                Margin="9,8,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox8"
+                            Width="239"
+                            Height="56"
+                            Margin="266,116,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Резус-приналежність">
+                            <Grid
+                                Width="231"
+                                Height="34"
+                                Margin="-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <TextBox
+                                    x:Name="textBox3"
+                                    Width="58"
+                                    Height="23"
+                                    Margin="6,5,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                                <DatePicker
+                                    Width="140"
+                                    Margin="79,5,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox9"
+                            Width="248"
+                            Height="56"
+                            Margin="10,175,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Віл-інфекція">
+                            <Grid
+                                Width="239"
+                                Height="30"
+                                Margin="-1,3,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <TextBox
+                                    x:Name="textBox4"
+                                    Width="90"
+                                    Height="23"
+                                    Margin="1,3,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                                <DatePicker
+                                    Width="120"
+                                    Margin="109,1,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox10"
+                            Width="525"
+                            Height="128"
+                            Margin="263,196,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Підвищена чутливість або непереносимість препарату">
+                            <DataGrid
+                                x:Name="dataGrid1"
+                                Width="504"
+                                Height="103"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Width="250" Header="найменування препарату" />
+                                    <DataGridTextColumn Width="250" Header="характер побічної дії" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox11"
+                            Width="248"
+                            Height="54"
+                            Margin="10,236,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Прізвище">
+                            <TextBox
+                                x:Name="textBox5"
+                                Width="229"
+                                Height="23"
+                                Margin="0,3,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox12"
+                            Width="248"
+                            Height="50"
+                            Margin="10,295,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Ім'я">
+                            <TextBox
+                                x:Name="textBox6"
+                                Width="214"
+                                Height="23"
+                                Margin="7,2,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox13"
+                            Width="248"
+                            Height="50"
+                            Margin="10,348,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="По батькові">
+                            <TextBox
+                                x:Name="textBox7"
+                                Width="219"
+                                Height="23"
+                                Margin="5,3,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox14"
+                            Width="131"
+                            Height="69"
+                            Margin="266,329,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Стать">
+                            <Grid
+                                Width="121"
+                                Height="51"
+                                Margin="0,0,-2,-4"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <RadioButton
+                                    x:Name="radioButton2"
+                                    Margin="8,7,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Чоловіча"
+                                    GroupName="sex" />
+                                <RadioButton
+                                    x:Name="radioButton3"
+                                    Margin="8,29,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Жіноча"
+                                    GroupName="sex" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox15"
+                            Width="210"
+                            Height="127"
+                            Margin="411,329,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Вік">
+                            <Grid
+                                Width="200"
+                                Height="103"
+                                Margin="0,0,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <TextBox
+                                    x:Name="textBox8"
+                                    Width="47"
+                                    Height="23"
+                                    Margin="5,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                                <DatePicker
+                                    Margin="62,8,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                                <TextBox
+                                    x:Name="textBox9"
+                                    Width="47"
+                                    Height="23"
+                                    Margin="50,42,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                                <Label
+                                    x:Name="label1"
+                                    Width="183"
+                                    Margin="7,62,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="повних років, для дітей: до 1-го&#xD;&#xA; року – місяців; до 1-го місяця – днів"
+                                    FontSize="10" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox16"
+                            Width="181"
+                            Height="81"
+                            Margin="806,243,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Постійне місце проживання">
+                            <Grid
+                                Width="130"
+                                Height="57"
+                                Margin="0,0,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <RadioButton
+                                    x:Name="radioButton4"
+                                    Margin="9,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Місто"
+                                    GroupName="pcity" />
+                                <RadioButton
+                                    x:Name="radioButton5"
+                                    Margin="9,30,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Село"
+                                    GroupName="pcity" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox17"
+                            Width="351"
+                            Height="195"
+                            Margin="636,331,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Адреса проживання">
+                            <Grid
+                                Width="331"
+                                Height="175"
+                                Margin="7,0,0,-2"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <Label
+                                    x:Name="label2"
+                                    Width="91"
+                                    Margin="10,7,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Область" />
+                                <ComboBox
+                                    x:Name="comboBox1"
+                                    Width="181"
+                                    Margin="125,11,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                                <Label
+                                    x:Name="label3"
+                                    Width="58"
+                                    Margin="10,52,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="район" />
+                                <ComboBox
+                                    x:Name="comboBox2"
+                                    Width="181"
+                                    Margin="125,53,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                                <Label
+                                    x:Name="label4"
+                                    Width="112"
+                                    Margin="5,94,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Населений пункт" />
+                                <ComboBox
+                                    x:Name="comboBox3"
+                                    Width="181"
+                                    Margin="125,98,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                                <Label
+                                    x:Name="label5"
+                                    Width="91"
+                                    Margin="10,139,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Адреса" />
+                                <TextBox
+                                    x:Name="textBox11"
+                                    Width="181"
+                                    Height="23"
+                                    Margin="125,142,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    RenderTransformOrigin="0.525,0.739"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox18"
+                            Width="210"
+                            Height="46"
+                            Margin="411,453,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Номер телефону">
+                            <TextBox
+                                x:Name="textBox10"
+                                Width="171"
+                                Height="23"
+                                Margin="10,1,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox19"
+                            Width="248"
+                            Height="104"
+                            Margin="10,395,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Місце роботи або навчання,&#xD;&#xA; спеціальність або посада">
+                            <TextBlock
+                                x:Name="textBlock"
+                                Width="214"
+                                Height="64"
+                                Margin="10,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBlock"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox20"
+                            Width="248"
+                            Height="64"
+                            Margin="10,504,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Ким направлений хворий">
+                            <ComboBox
+                                x:Name="comboBox4"
+                                Width="200"
+                                Height="24"
+                                Margin="19,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox21"
+                            Width="258"
+                            Height="112"
+                            Margin="266,504,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Госпіталізований(а) в стаціонар">
+                            <Grid
+                                Width="249"
+                                Height="87"
+                                Margin="-1,2,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <RadioButton
+                                    x:Name="radioButton6"
+                                    Margin="10,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="за терміновими показаннями"
+                                    GroupName="gosp" />
+                                <RadioButton
+                                    x:Name="radioButton7"
+                                    Margin="10,31,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="в плановому порядку "
+                                    GroupName="gosp" />
+                                <Label
+                                    x:Name="label6"
+                                    Margin="158,26,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="через" />
+                                <TextBox
+                                    x:Name="textBox12"
+                                    Width="36"
+                                    Height="23"
+                                    Margin="10,49,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                                <Label
+                                    x:Name="label7"
+                                    Width="178"
+                                    Height="31"
+                                    Margin="61,46,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="годин після початку захворювання"
+                                    FontSize="10" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox22"
+                            Width="209"
+                            Height="71"
+                            Margin="550,545,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="діагноз при надходженні">
+                            <TextBox
+                                x:Name="textBox13"
+                                Height="23"
+                                Margin="10,10,11,0"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox23"
+                            Width="211"
+                            Height="71"
+                            Margin="776,545,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Діагноз при госпіталізації">
+                            <TextBox
+                                x:Name="textBox14"
+                                Width="179"
+                                Height="23"
+                                Margin="10,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox24"
+                            Width="205"
+                            Height="53"
+                            Margin="34,573,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Діагноз клінічний">
+                            <TextBox
+                                x:Name="textBox15"
+                                Width="174"
+                                Height="23"
+                                Margin="10,3,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBox"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox25"
+                            Width="205"
+                            Height="49"
+                            Margin="192,631,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Дата встановлення">
+                            <DatePicker
+                                Width="157"
+                                Height="23"
+                                Margin="10,2,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox26"
+                            Width="192"
+                            Height="49"
+                            Margin="716,631,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Лікар">
+                            <ComboBox
+                                x:Name="comboBox5"
+                                Height="29"
+                                Margin="0,0,3,-2"
+                                VerticalAlignment="Top" />
+                        </GroupBox>
+
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Листок профілак-
+                            <LineBreak />
+                            тичного огляду
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <GroupBox
+                            x:Name="groupBox27"
+                            Width="371"
+                            Height="161"
+                            Margin="10,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Діагноз заключний клінічний">
+                            <Grid
+                                Width="361"
+                                Height="146"
+                                Margin="0,0,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <Label
+                                    x:Name="label8"
+                                    Width="77"
+                                    Margin="10,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="основний" />
+                                <TextBox
+                                    x:Name="textBox16"
+                                    Width="259"
+                                    Height="23"
+                                    Margin="92,13,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                                <Label
+                                    x:Name="label9"
+                                    Width="142"
+                                    Margin="10,50,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="ускладнення основного" />
+                                <TextBox
+                                    x:Name="textBox17"
+                                    Width="194"
+                                    Height="23"
+                                    Margin="157,54,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                                <Label
+                                    x:Name="label10"
+                                    Width="77"
+                                    Margin="10,96,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="супутній" />
+                                <TextBox
+                                    x:Name="textBox18"
+                                    Width="244"
+                                    Height="23"
+                                    Margin="107,99,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox28"
+                            Width="623"
+                            Height="211"
+                            Margin="387,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Хірургічні операції, методи знеболювання і післяопераційні ускладнення">
+                            <DataGrid
+                                x:Name="dataGrid2"
+                                Width="603"
+                                Height="174"
+                                Margin="3,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Номер з/п" />
+                                    <DataGridTextColumn Header="Назва операції, код" />
+                                    <DataGridTemplateColumn Header="Дата">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <DatePicker SelectedDate="{Binding Дата}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="Метод знеболювання" />
+                                    <DataGridTextColumn Width="90" Header="Ускладнення" />
+                                    <DataGridComboBoxColumn Header="Хірург" />
+                                    <DataGridComboBoxColumn Header="Анестезіолог" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox29"
+                            Width="371"
+                            Height="185"
+                            Margin="10,176,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Інші види лікування">
+                            <TextBlock
+                                x:Name="textBlock1"
+                                Width="345"
+                                Height="151"
+                                Margin="6,6,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBlock"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox30"
+                            Width="248"
+                            Height="139"
+                            Margin="387,222,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="для хворих на злоякісні новоутворення">
+                            <Grid
+                                Width="219"
+                                Height="110"
+                                Margin="11,3,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <RadioButton
+                                    x:Name="radioButton8"
+                                    Margin="10,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Спеціальне лікування"
+                                    GroupName="onko" />
+                                <ComboBox
+                                    x:Name="comboBox6"
+                                    Width="199"
+                                    Margin="10,30,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top">
+                                    <ComboBox.ItemsSource>
+                                        <col:ArrayList>
+                                            <sys:String>хірургічне</sys:String>
+                                            <sys:String>дистанційна гамма-терапія</sys:String>
+                                            <sys:String>рентгенотерапія</sys:String>
+                                            <sys:String>швидкі електрони</sys:String>
+                                            <sys:String>контактна і дистанційна гамма-терапія</sys:String>
+                                            <sys:String>контактна гамма-терапія і глибока рентгенотерапія</sys:String>
+                                            <sys:String>хірургічне і гамма-терапія</sys:String>
+                                            <sys:String>хірургічне і рентгенотерапія</sys:String>
+                                            <sys:String>хірургічне і комбіноване лікування</sys:String>
+                                            <sys:String>хіміопрепаратами</sys:String>
+                                            <sys:String>гормональними препаратами</sys:String>
+                                        </col:ArrayList>
+                                    </ComboBox.ItemsSource>
+                                </ComboBox>
+                                <RadioButton
+                                    x:Name="radioButton9"
+                                    Margin="10,62,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Поліативне"
+                                    GroupName="onko" />
+                                <RadioButton
+                                    x:Name="radioButton10"
+                                    Margin="10,82,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="Симптоматичне лікування"
+                                    GroupName="onko" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox31"
+                            Width="370"
+                            Height="140"
+                            Margin="640,221,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Відмітка про видачу листка непрацездатності">
+                            <DataGrid
+                                x:Name="dataGrid3"
+                                Width="360"
+                                Height="110"
+                                Margin="0,5,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Width="110" Header="№" />
+                                    <DataGridTemplateColumn Width="110" Header="дата">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <DatePicker SelectedDate="{Binding дата}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Width="110" Header="дата">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <DatePicker SelectedDate="{Binding дата}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox32"
+                            Width="290"
+                            Height="110"
+                            Margin="10,366,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Внесення діагнозу в листок непрацездатності">
+                            <Grid
+                                Width="268"
+                                Height="82"
+                                Margin="5,4,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <RadioButton
+                                    x:Name="radioButton11"
+                                    Width="113"
+                                    Margin="10,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="згоден(а)"
+                                    GroupName="bul" />
+                                <RadioButton
+                                    x:Name="radioButton12"
+                                    Width="113"
+                                    Margin="10,41,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="не згоден(на)"
+                                    GroupName="bul" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox33"
+                            Width="234"
+                            Height="196"
+                            Margin="315,365,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Працездатність">
+                            <Grid
+                                Width="220"
+                                Height="158"
+                                Margin="4,6,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <RadioButton
+                                    x:Name="radioButton13"
+                                    Width="161"
+                                    Margin="10,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="відновлена повністю"
+                                    GroupName="bul2" />
+                                <RadioButton
+                                    x:Name="radioButton14"
+                                    Width="161"
+                                    Margin="10,30,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="знижена"
+                                    GroupName="bul2" />
+                                <RadioButton
+                                    x:Name="radioButton15"
+                                    Width="161"
+                                    Margin="10,50,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="тимчасово втрачена"
+                                    GroupName="bul2" />
+                                <RadioButton
+                                    x:Name="radioButton16"
+                                    Width="161"
+                                    Margin="10,70,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="стійко втрачена"
+                                    GroupName="bul2" />
+                                <TextBox
+                                    x:Name="textBox19"
+                                    Width="200"
+                                    Height="23"
+                                    Margin="10,125,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBox"
+                                    TextWrapping="Wrap" />
+                                <Label
+                                    x:Name="label11"
+                                    Width="200"
+                                    Margin="10,94,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="причини втрати" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox34"
+                            Width="445"
+                            Height="197"
+                            Margin="565,364,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Висновок для тих, хто поступає на експертизу">
+                            <TextBlock
+                                x:Name="textBlock2"
+                                Width="416"
+                                Height="160"
+                                Margin="11,8,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBlock"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox35"
+                            Width="290"
+                            Height="80"
+                            Margin="10,481,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Результат лікування">
+                            <ComboBox
+                                x:Name="comboBox7"
+                                Width="251"
+                                Margin="10,20,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <ComboBox.ItemsSource>
+                                    <col:ArrayList>
+                                        <sys:String>виписаний(а) з одужанням</sys:String>
+                                        <sys:String>виписаний(а) з поліпшенням</sys:String>
+                                        <sys:String>виписаний(а) з погіршенням</sys:String>
+                                        <sys:String>виписаний(а) без змін</sys:String>
+                                        <sys:String>помер(ла)</sys:String>
+                                        <sys:String>переведений(а) в інший лікувальний заклад</sys:String>
+                                        <sys:String>здоровий(а)</sys:String>
+                                    </col:ArrayList>
+                                </ComboBox.ItemsSource>
+                            </ComboBox>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox36"
+                            Width="539"
+                            Height="114"
+                            Margin="10,566,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Особливі відмітки">
+                            <Grid
+                                Width="529"
+                                Height="84"
+                                Margin="0,4,-2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+                                <Label
+                                    x:Name="label12"
+                                    Width="223"
+                                    Margin="7,5,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="онкологічний профілактичний огляд" />
+                                <DatePicker
+                                    Width="209"
+                                    Margin="7,37,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                                <Label
+                                    x:Name="label13"
+                                    Width="212"
+                                    Margin="265,5,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="флюорографічне обстеження" />
+                                <DatePicker
+                                    Width="202"
+                                    Margin="265,38,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox37"
+                            Width="196"
+                            Height="63"
+                            Margin="565,566,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Лікуючий лікар">
+                            <ComboBox
+                                x:Name="comboBox8"
+                                Width="164"
+                                Margin="10,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox38"
+                            Width="227"
+                            Height="63"
+                            Margin="783,566,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Завідувач відділення">
+                            <ComboBox
+                                x:Name="comboBox9"
+                                Width="195"
+                                Margin="10,8,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top" />
+                        </GroupBox>
+
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Відомості щодо
+                            <LineBreak />
+                            страхування
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <DataGrid Margin="2,2,4,8">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="150" Header="Дата" />
+                            <DataGridTextColumn Header="Найменування закладу охорони здоров’я, відділення" />
+                            <DataGridTextColumn Header="Заключний діагноз" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

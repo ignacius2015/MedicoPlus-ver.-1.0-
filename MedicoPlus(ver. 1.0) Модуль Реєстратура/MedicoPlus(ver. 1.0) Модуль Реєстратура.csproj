@@ -77,6 +77,9 @@
     <Compile Include="Registry\CreateCard.xaml.cs">
       <DependentUpon>CreateCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Registry\CreateStc.xaml.cs">
+      <DependentUpon>CreateStc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Registry\Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
@@ -94,6 +97,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Registry\CreateCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registry\CreateStc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
