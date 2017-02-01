@@ -83,6 +83,9 @@
     <Compile Include="Registry\JournalGosp.xaml.cs">
       <DependentUpon>JournalGosp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Registry\JournalVidm.xaml.cs">
+      <DependentUpon>JournalVidm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Registry\Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
@@ -108,6 +111,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Registry\JournalGosp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registry\JournalVidm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

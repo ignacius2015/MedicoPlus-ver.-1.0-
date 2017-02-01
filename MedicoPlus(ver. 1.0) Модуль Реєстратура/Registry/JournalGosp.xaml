@@ -30,7 +30,7 @@
                 VerticalAlignment="Top">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Номер з/п" />
-                    <DataGridTemplateColumn Width="100" Header="Дата">
+                    <DataGridTemplateColumn Width="130" Header="Дата госпіталізації">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <DatePicker SelectedDate="{Binding Дата}" />
