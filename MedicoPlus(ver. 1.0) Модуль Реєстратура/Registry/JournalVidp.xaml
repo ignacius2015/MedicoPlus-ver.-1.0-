@@ -1,0 +1,48 @@
+﻿<Window x:Class="MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry.JournalVidp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry"
+        mc:Ignorable="d"
+        Title="МедікоПлюс.Журнал обліку хворих, яким надана лікувальна відпустка." Height="768" Width="1024">
+    <Grid>
+        <ScrollViewer
+            x:Name="scroll"
+            HorizontalScrollBarVisibility="Visible"
+            VerticalScrollBarVisibility="Hidden">
+            <DataGrid x:Name="dataGrid">
+                <DataGrid.Columns>
+                     <DataGridTextColumn Header="Номер з/п" />
+                     <DataGridTextColumn Width="200" Header="П.І.Б. хворого" />
+                     <DataGridTextColumn Width="110" Header="Номер медкарти" />
+                    <DataGridTextColumn Width="200" Header="Строк лікувальної відпустки,&#xa; який встановлений лікуючим &#xa;лікарем"></DataGridTextColumn>
+                    <DataGridTemplateColumn
+                        x:Name="birth"
+                        Width="180"
+                        Header="Дата і час виходу хворого&#xa; в лікувальну відпустку">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding birth}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Адреса, за якою хворий&#xa; буде знаходитися у відпустці"></DataGridTextColumn>
+                    <DataGridTemplateColumn
+                        x:Name="dd"
+                        Width="180"
+                        Header="Час і дата повернення хворого &#xa;з лікувальної відпустки">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding dd}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Width="160" Header="Число днів, годин&#xa; перебування хворого у відпустці"></DataGridTextColumn>
+                    <DataGridComboBoxColumn Header="Підпис медичної сестри&#xa; відділення, яка прийняла &#xa;хворого"></DataGridComboBoxColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </ScrollViewer>
+    </Grid>
+</Window>

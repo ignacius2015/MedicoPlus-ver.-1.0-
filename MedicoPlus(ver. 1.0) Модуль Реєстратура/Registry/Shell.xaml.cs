@@ -44,7 +44,8 @@ namespace MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry
 
         private void journal2_Click(object sender, RoutedEventArgs e)
         {
-
+            JournalVidm journalVidm=new JournalVidm();
+            journalVidm.Show();
         }
 
         private void journal3_Click(object sender, RoutedEventArgs e)
