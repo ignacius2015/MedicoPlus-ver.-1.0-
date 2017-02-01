@@ -64,8 +64,10 @@ namespace MedicoPlus_ver._1._0__Модуль_Реєстратура
                     }
                 }
             }
-            finally
-            { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
 
         }
