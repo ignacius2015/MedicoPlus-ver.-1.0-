@@ -11,8 +11,8 @@
     mc:Ignorable="d">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="65*" />
+            <ColumnDefinition Width="189*" />
         </Grid.ColumnDefinitions>
         <ItemsControl Grid.Column="1">
             <ScrollViewer
@@ -35,15 +35,15 @@
                             Binding="{Binding Path=Company}"
                             Header="Номер Мед. карти" />
                         <DataGridTextColumn
-                            Width="300"
+                            Width="280"
                             Binding="{Binding Path=Price}"
                             Header="П.І.Б." />
                         <DataGridTextColumn
-                            Width="200"
+                            Width="150"
                             Binding="{Binding Path=Price}"
                             Header="дата останнього запису" />
                         <DataGridTextColumn
-                            Width="200"
+                            Width="150"
                             Binding="{Binding Path=Price}"
                             Header="Місце знаходження" />
                     </DataGrid.Columns>
@@ -65,11 +65,35 @@
                     Click="CreateStac_Click"
                     Content="Розпочати стаціонарну картку" />
                 <Button
+                    x:Name="journal"
+                    Height="50"
+                    Margin="5,5,5,5"
+                    Click="journal_Click"
+                    Content="Журнал обліку прийому хворих в стаціонар" />
+                <Button
+                    x:Name="journal2"
+                    Height="50"
+                    Margin="5,5,5,5"
+                    Click="journal2_Click"
+                    Content="Журнал відмовлень в госпіталізації" />
+                <Button
+                    x:Name="journal3"
+                    Height="50"
+                    Margin="5,5,5,5"
+                    Click="journal3_Click"
+                    Content="Журнал обліку хворих,&#xa; яким надана лікувальна відпустка" />
+                <Button
+                    x:Name="journal4"
+                    Height="50"
+                    Margin="5,5,5,5"
+                    Click="journal4_Click"
+                    Content="Журнал обліку перебування хворих&#xa; в денному стаціонарі, стаціонарі вдома" />
+                <Button
                     x:Name="SearchCard"
                     Height="50"
                     Margin="5,5,5,5"
+                    Click="SearchCard_Click"
                     Content="Пошук картки" />
-
             </StackPanel>
         </ItemsControl>
     </Grid>

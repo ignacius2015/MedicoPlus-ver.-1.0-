@@ -1151,10 +1151,253 @@
                     <DataGrid Margin="2,2,4,8">
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="150" Header="Дата" />
-                            <DataGridTextColumn Header="Найменування закладу охорони здоров’я, відділення" />
-                            <DataGridTextColumn Header="Заключний діагноз" />
+                            <DataGridTextColumn Width="550" Header="Найменування закладу охорони здоров'я, відділення" />
+                            <DataGridTextColumn Width="300" Header="Заключний діагноз" />
                         </DataGrid.Columns>
                     </DataGrid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            запис лікаря
+                            <LineBreak />
+                            приймального відділення
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <GroupBox
+                            x:Name="groupBox39"
+                            Width="344"
+                            Height="164"
+                            Margin="10,60,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Скарги">
+                            <TextBlock
+                                x:Name="textBlock3"
+                                Width="324"
+                                Height="132"
+                                Margin="2,2,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBlock"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox40"
+                            Width="629"
+                            Height="164"
+                            Margin="371,60,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Анамнез хвороби">
+                            <TextBlock
+                                x:Name="textBlock4"
+                                Width="613"
+                                Height="140"
+                                Margin="3,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBlock"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox41"
+                            Width="344"
+                            Height="222"
+                            Margin="10,229,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Анамнез життя">
+                            <TextBlock
+                                x:Name="textBlock5"
+                                Width="325"
+                                Height="193"
+                                Margin="3,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBlock"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox42"
+                            Width="629"
+                            Height="232"
+                            Margin="371,229,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Header="Об'єктивний стан хворого">
+                            <TextBlock
+                                x:Name="textBlock6"
+                                Width="610"
+                                Height="205"
+                                Margin="3,1,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Text="TextBlock"
+                                TextWrapping="Wrap" />
+                        </GroupBox>
+                        <Label
+                            x:Name="label14"
+                            Width="293"
+                            Margin="272,20,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="ЗАПИС ЛІКАРЯ ПРИЙМАЛЬНОГО ВІДДІЛЕННЯ"
+                            FontWeight="Bold" />
+
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            скарги, анамнез хвороби,
+                            <LineBreak />
+                            анамнез життя
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <Label
+                            x:Name="label15"
+                            Width="494"
+                            Margin="246,11,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="об'єктивний стан хворого, попередній діагноз, план обстеження, план лікування"
+                            FontWeight="Bold" />
+                        <TextBlock
+                            x:Name="textBlock7"
+                            Width="990"
+                            Height="639"
+                            Margin="10,41,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text="TextBlock"
+                            TextWrapping="Wrap" />
+
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Результати обстежень
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="396*"/>
+                            <ColumnDefinition Width="109*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            x:Name="label16"
+                            Width="644"
+                            Margin="156,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Результати обстежень (лабораторні, ультразвукові, рентгенологічні, функціональна діагностика тощо)"
+                            FontWeight="Bold" Grid.ColumnSpan="2" />
+                        <DataGrid
+                            x:Name="dataGrid4"
+                            Width="644"
+                            Height="466"
+                            Margin="156,41,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top" Grid.ColumnSpan="2">
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Width="150" Header="Дата">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <DatePicker SelectedDate="{Binding Дата}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridComboBoxColumn Width="200" Header="Вид обстеження" />
+                                <DataGridTextColumn Width="290" Header="Результати" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                            Щоденник
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <DataGrid x:Name="dataGrid5" HorizontalAlignment="Left" Margin="60,50,0,0" VerticalAlignment="Top" Width="884" Height="552">
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Width="150" Header="Дата">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <DatePicker SelectedDate="{Binding Дата}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn Width="*" Header="текст запису"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Label x:Name="label17" Content="Щоденник" HorizontalAlignment="Left" Margin="434,25,0,0" VerticalAlignment="Top" Width="86" FontWeight="Bold"/>
+
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                           листок огляду та <LineBreak/>консультацій спеціалістами
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <DataGrid x:Name="dataGrid6" HorizontalAlignment="Left" Margin="69,69,0,0" VerticalAlignment="Top" Width="883" Height="383">
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Width="150" Header="Дата">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <DatePicker SelectedDate="{Binding Дата}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn Width="500" Header="Дані огляду або консультації"></DataGridTextColumn>
+                                <DataGridComboBoxColumn Width="210" Header="лікар"></DataGridComboBoxColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Label x:Name="label18" Content="листок огляду та консультацій спеціалістами" HorizontalAlignment="Left" Margin="319,25,0,0" VerticalAlignment="Top" Width="309" FontWeight="Bold"/>
+
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Height="35" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
+                           Епікриз
+                        </TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        
+                    </Grid>
                 </TabItem.Content>
             </TabItem>
         </TabControl>

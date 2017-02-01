@@ -34,5 +34,30 @@ namespace MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry
         {
 
         }
+
+        private void journal_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void journal2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void journal3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void journal4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SearchCard_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
