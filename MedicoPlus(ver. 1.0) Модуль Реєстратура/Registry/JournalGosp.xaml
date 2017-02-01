@@ -1,0 +1,95 @@
+﻿<Window
+    x:Class="MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry.JournalGosp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="МедікоПлюс. Журнал обліку прийому хворих в стаціонар."
+    Width="1024"
+    Height="768"
+    mc:Ignorable="d">
+    <Grid>
+        <Label
+            x:Name="label"
+            Width="277"
+            Margin="332,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Журнал обліку прийому хворих в стаціонар"
+            FontWeight="Bold" />
+        <ScrollViewer
+            x:Name="scroll"
+            HorizontalScrollBarVisibility="Visible"
+            VerticalScrollBarVisibility="Hidden">
+            <DataGrid
+                x:Name="dataGrid"
+                Width="1015"
+                Height="300"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Номер з/п" />
+                    <DataGridTemplateColumn Width="100" Header="Дата">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding Дата}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Width="200" Header="П.І.Б. хворого" />
+                    <DataGridTemplateColumn
+                        x:Name="birth"
+                        Width="110"
+                        Header="Дата народження">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding birth}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Місце проживання хворого" />
+                    <DataGridComboBoxColumn Header="Ким доставлен або направлен" />
+                    <DataGridComboBoxColumn Width="110" Header="Відділення" />
+                    <DataGridTextColumn Header="Номер медкарти" />
+                    <DataGridTextColumn Header="Діагноз хворого" />
+                    <DataGridTextColumn Header="Заключний діагноз" />
+                    <DataGridTemplateColumn Header="Виписаний, переведений">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Betrag}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <TextBox x:Name="MyTb" Text="{Binding Betrag, Mode=TwoWay}" />
+                                <DataTemplate.Triggers>
+                                    <Trigger SourceName="MyTb" Property="IsVisible" Value="true">
+                                        <Setter TargetName="MyTb" Property="FocusManager.FocusedElement" Value="{Binding ElementName=MyTb}" />
+                                    </Trigger>
+                                </DataTemplate.Triggers>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Вжиті заходи">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Betrag}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <TextBox x:Name="MyTb" Text="{Binding Betrag, Mode=TwoWay}" />
+                                <DataTemplate.Triggers>
+                                    <Trigger SourceName="MyTb" Property="IsVisible" Value="true">
+                                        <Setter TargetName="MyTb" Property="FocusManager.FocusedElement" Value="{Binding ElementName=MyTb}" />
+                                    </Trigger>
+                                </DataTemplate.Triggers>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+    </Grid>
+</Window>

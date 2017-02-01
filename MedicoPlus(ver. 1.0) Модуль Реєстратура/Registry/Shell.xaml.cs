@@ -32,12 +32,14 @@ namespace MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry
 
         private void CreateStac_Click(object sender, RoutedEventArgs e)
         {
-
+            CreateStc createStc=new CreateStc();
+            createStc.Show();
         }
 
         private void journal_Click(object sender, RoutedEventArgs e)
         {
-
+            JournalGosp journalGosp=new JournalGosp();
+            journalGosp.Show();
         }
 
         private void journal2_Click(object sender, RoutedEventArgs e)
