@@ -80,6 +80,9 @@
     <Compile Include="Registry\CreateStc.xaml.cs">
       <DependentUpon>CreateStc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Registry\JournalDom.xaml.cs">
+      <DependentUpon>JournalDom.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Registry\JournalGosp.xaml.cs">
       <DependentUpon>JournalGosp.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Registry\CreateStc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registry\JournalDom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

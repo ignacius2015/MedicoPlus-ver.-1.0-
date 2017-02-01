@@ -50,12 +50,14 @@ namespace MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry
 
         private void journal3_Click(object sender, RoutedEventArgs e)
         {
-
+            JournalVidp journalVidp=new JournalVidp();
+            journalVidp.Show();
         }
 
         private void journal4_Click(object sender, RoutedEventArgs e)
         {
-
+            JournalDom journalDom=new JournalDom();
+            journalDom.Show();
         }
 
         private void SearchCard_Click(object sender, RoutedEventArgs e)

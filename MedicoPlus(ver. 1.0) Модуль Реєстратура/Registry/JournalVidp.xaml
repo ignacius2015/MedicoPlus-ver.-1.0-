@@ -1,11 +1,14 @@
-﻿<Window x:Class="MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry.JournalVidp"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry"
-        mc:Ignorable="d"
-        Title="МедікоПлюс.Журнал обліку хворих, яким надана лікувальна відпустка." Height="768" Width="1024">
+﻿<Window
+    x:Class="MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry.JournalVidp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="МедікоПлюс.Журнал обліку хворих, яким надана лікувальна відпустка."
+    Width="1024"
+    Height="768"
+    mc:Ignorable="d">
     <Grid>
         <ScrollViewer
             x:Name="scroll"
@@ -13,10 +16,10 @@
             VerticalScrollBarVisibility="Hidden">
             <DataGrid x:Name="dataGrid">
                 <DataGrid.Columns>
-                     <DataGridTextColumn Header="Номер з/п" />
-                     <DataGridTextColumn Width="200" Header="П.І.Б. хворого" />
-                     <DataGridTextColumn Width="110" Header="Номер медкарти" />
-                    <DataGridTextColumn Width="200" Header="Строк лікувальної відпустки,&#xa; який встановлений лікуючим &#xa;лікарем"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Номер з/п" />
+                    <DataGridTextColumn Width="200" Header="П.І.Б. хворого" />
+                    <DataGridTextColumn Width="110" Header="Номер медкарти" />
+                    <DataGridTextColumn Width="200" Header="Строк лікувальної відпустки,&#xa; який встановлений лікуючим &#xa;лікарем" />
                     <DataGridTemplateColumn
                         x:Name="birth"
                         Width="180"
@@ -27,7 +30,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="Адреса, за якою хворий&#xa; буде знаходитися у відпустці"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Адреса, за якою хворий&#xa; буде знаходитися у відпустці" />
                     <DataGridTemplateColumn
                         x:Name="dd"
                         Width="180"
@@ -38,8 +41,8 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Width="160" Header="Число днів, годин&#xa; перебування хворого у відпустці"></DataGridTextColumn>
-                    <DataGridComboBoxColumn Header="Підпис медичної сестри&#xa; відділення, яка прийняла &#xa;хворого"></DataGridComboBoxColumn>
+                    <DataGridTextColumn Width="160" Header="Число днів, годин&#xa; перебування хворого у відпустці" />
+                    <DataGridComboBoxColumn Header="Підпис медичної сестри&#xa; відділення, яка прийняла &#xa;хворого" />
                 </DataGrid.Columns>
             </DataGrid>
 
