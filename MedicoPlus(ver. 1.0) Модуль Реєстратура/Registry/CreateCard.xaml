@@ -134,21 +134,73 @@
                         </GroupBox>
                         <GroupBox
                             x:Name="groupBox5"
-                            Width="342"
-                            Height="119"
-                            Margin="333,121,0,0"
+                            Width="385"
+                            Height="137"
+                            Margin="310,117,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Header="Місце проживання хворого">
-                            <TextBlock
-                                x:Name="textBlock"
-                                Width="329"
-                                Height="87"
-                                Margin="3,3,-2,0"
+                            <Grid
+                                Width="377"
+                                Height="117"
+                                Margin="-2,0,-2,-2"
                                 HorizontalAlignment="Left"
-                                VerticalAlignment="Top"
-                                Text="TextBlock"
-                                TextWrapping="Wrap" />
+                                VerticalAlignment="Top">
+                                <Label
+                                    x:Name="label4"
+                                    Width="54"
+                                    Margin="10,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="область" />
+                                <Label
+                                    x:Name="label5"
+                                    Width="44"
+                                    Margin="10,41,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="район" />
+                                <Label
+                                    x:Name="label6"
+                                    Width="104"
+                                    Margin="10,72,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="населений пункт" />
+                                <ComboBox
+                                    x:Name="comboBox5"
+                                    Width="170"
+                                    Margin="69,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                                <ComboBox
+                                    x:Name="comboBox6"
+                                    Width="170"
+                                    Margin="69,41,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                                <ComboBox
+                                    x:Name="comboBox7"
+                                    Width="120"
+                                    Margin="119,76,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
+                                <Label
+                                    x:Name="label7"
+                                    Margin="295,5,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Content="адреса" />
+                                <TextBlock
+                                    x:Name="textBlock"
+                                    Width="122"
+                                    Height="79"
+                                    Margin="255,28,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Text="TextBlock"
+                                    TextWrapping="Wrap" />
+                            </Grid>
                         </GroupBox>
                         <GroupBox
                             x:Name="groupBox6"
@@ -382,15 +434,13 @@
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Header="група крові">
-                            <TextBox
-                                x:Name="textBox8"
+                            <ComboBox
+                                x:Name="comboBox4"
                                 Width="120"
-                                Height="23"
-                                Margin="7,5,0,0"
+                                Height="20"
+                                Margin="5,6,0,0"
                                 HorizontalAlignment="Left"
-                                VerticalAlignment="Top"
-                                Text="TextBox"
-                                TextWrapping="Wrap" />
+                                VerticalAlignment="Top" />
                         </GroupBox>
                         <GroupBox
                             x:Name="groupBox14"
@@ -447,15 +497,6 @@
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Top"
                                     Content="ні" />
-                                <TextBox
-                                    x:Name="textBox9"
-                                    Width="122"
-                                    Height="23"
-                                    Margin="0,51,0,0"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Top"
-                                    Text="TextBox"
-                                    TextWrapping="Wrap" />
                                 <Label
                                     x:Name="label3"
                                     Width="90"
@@ -464,6 +505,12 @@
                                     VerticalAlignment="Top"
                                     Content="діагноз"
                                     RenderTransformOrigin="0.526,0.5" />
+                                <ComboBox
+                                    x:Name="comboBox8"
+                                    Width="120"
+                                    Margin="5,52,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" />
                             </Grid>
                         </GroupBox>
                         <GroupBox
@@ -597,7 +644,7 @@
                 </TabItem.Content>
             </TabItem>
             <TabItem>
-                <HeaderedContentControl.Header>
+                <TabItem.Header>
                     <StackPanel Height="55" Orientation="Horizontal">
                         <TextBlock Margin="0,0,5,0" TextWrapping="WrapWithOverflow">
                             Листок запису
@@ -607,7 +654,24 @@
                             діагнозів
                         </TextBlock>
                     </StackPanel>
-                </HeaderedContentControl.Header>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Width="120" Header="Дата">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding Дата}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridComboBoxColumn Width="300" Header="Заключні (уточнені) діагнози" />
+                            <DataGridCheckBoxColumn Header="Вперше встановлений діагноз" />
+                            <DataGridCheckBoxColumn Width="200" Header="У тому числі встановлений&#xa; вперше при профілактичному&#xa; огляді" />
+                            <DataGridComboBoxColumn Width="150" Header="лікар" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem.Content>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
@@ -875,7 +939,7 @@
                         <ListView
                             x:Name="listView264_42"
                             Width="1000"
-                            Height="108"
+                            Height="328"
                             Margin="5,3,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top">
@@ -888,64 +952,6 @@
                                 </GridView>
                             </ListView.View>
                         </ListView>
-                        <GroupBox
-                            x:Name="groupBox21"
-                            Width="323"
-                            Height="194"
-                            Margin="10,137,0,0"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top"
-                            FontWeight="Bold"
-                            Header="Дані лабораторних інструментальних досліджень">
-                            <Grid
-                                Width="308"
-                                Height="127"
-                                Margin="0,10,0,0"
-                                HorizontalAlignment="Left"
-                                VerticalAlignment="Top">
-                                <GroupBox
-                                    x:Name="groupBox22"
-                                    Width="195"
-                                    Height="52"
-                                    Margin="13,5,0,0"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Top"
-                                    FontWeight="Normal"
-                                    Header="Дата дослідження">
-                                    <DatePicker
-                                        Width="158"
-                                        Height="24"
-                                        Margin="14,3,0,0"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Top" />
-                                </GroupBox>
-                                <GroupBox
-                                    x:Name="groupBox23"
-                                    Width="195"
-                                    Height="46"
-                                    Margin="13,71,0,0"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Top"
-                                    FontWeight="Normal"
-                                    Header="Вид дослідження">
-                                    <ComboBox
-                                        x:Name="comboBox1"
-                                        Width="173"
-                                        Margin="4,0,0,0"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Top" />
-                                </GroupBox>
-                                <Button
-                                    x:Name="button"
-                                    Width="85"
-                                    Height="46"
-                                    Margin="213,49,0,0"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Top"
-                                    Content="Сформувати" />
-
-                            </Grid>
-                        </GroupBox>
 
                     </Grid>
                 </TabItem.Content>
@@ -1065,7 +1071,7 @@
                                 VerticalAlignment="Top">
                                 <DatePicker
                                     Width="114"
-                                    Height="36"
+                                    Height="27"
                                     Margin="10,23,0,0"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Top" />
