@@ -679,19 +679,28 @@
                     </StackPanel>
                 </TabItem.Header>
                 <TabItem.Content>
-                    <DataGrid>
+                    <DataGrid x:Name="diaglist">
                         <DataGrid.Columns>
-                            <DataGridTemplateColumn Width="120" Header="Дата">
+                            <DataGridTemplateColumn
+                                x:Name="data22"
+                                Width="120"
+                                Header="Дата">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <DatePicker SelectedDate="{Binding Дата}" />
+                                        <DatePicker SelectedDate="{Binding data22}" />
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
-                            <DataGridComboBoxColumn Width="300" Header="Заключні (уточнені) діагнози" />
+                            <DataGridComboBoxColumn
+                                Width="300"
+                                Header="Заключні (уточнені) діагнози"
+                                SelectedItemBinding="{Binding Path=diagnosis_table, Mode=TwoWay}" />
                             <DataGridCheckBoxColumn Header="Вперше встановлений діагноз" />
                             <DataGridCheckBoxColumn Width="200" Header="У тому числі встановлений&#xa; вперше при профілактичному&#xa; огляді" />
-                            <DataGridComboBoxColumn Width="150" Header="лікар" />
+                            <DataGridComboBoxColumn
+                                Width="150"
+                                Header="лікар"
+                                SelectedItemBinding="{Binding Path=personal, Mode=TwoWay}" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem.Content>
@@ -709,7 +718,7 @@
                 <TabItem.Content>
                     <Grid>
                         <DataGrid
-                            x:Name="dataGrid"
+                            x:Name="graft"
                             Width="1000"
                             Height="303"
                             Margin="5,3,0,0"
@@ -720,34 +729,19 @@
                             <DataGrid.Columns>
                                 <DataGridTextColumn
                                     Width="160"
-                                    Binding="{Binding Path=Title}"
+                                    Binding="{Binding Path=graft.name}"
                                     Header="Найменування щеплення" />
-                                <DataGridTextColumn
-                                    Width="100"
-                                    Binding="{Binding Path=Title}"
-                                    Header="Дата" />
-                                <DataGridTextColumn
-                                    Width="50"
-                                    Binding="{Binding Path=Title}"
-                                    Header="Вік" />
-                                <DataGridTextColumn
-                                    Width="60"
-                                    Binding="{Binding Path=Title}"
-                                    Header="Доза" />
-                                <DataGridTextColumn
-                                    Width="60"
-                                    Binding="{Binding Path=Title}"
-                                    Header="Серія" />
-                                <DataGridTextColumn
-                                    Width="120"
-                                    Binding="{Binding Path=Title}"
-                                    Header="Назва препарату" />
+                                <DataGridTextColumn Width="100" Header="Дата" />
+                                <DataGridTextColumn Width="50" Header="Вік" />
+                                <DataGridTextColumn Width="60" Header="Доза" />
+                                <DataGridTextColumn Width="60" Header="Серія" />
+                                <DataGridTextColumn Width="120" Header="Назва препарату" />
                                 <DataGridComboBoxColumn
                                     Width="120"
                                     Header="Способ введення"
                                     SelectedItemBinding="{Binding Path=CategoryName}">
                                     <DataGridComboBoxColumn.ItemsSource>
-                                        <col:ArrayList>
+                                        <col:ArrayList x:Name="CategoryName">
                                             <sys:String>накожний</sys:String>
                                             <sys:String>внутрішньошкірний</sys:String>
                                             <sys:String>підшкірний</sys:String>
@@ -757,21 +751,11 @@
                                         </col:ArrayList>
                                     </DataGridComboBoxColumn.ItemsSource>
                                 </DataGridComboBoxColumn>
-                                <DataGridTextColumn
-                                    Width="100"
-                                    Binding="{Binding Path=Title}"
-                                    Header="місцева реакція" />
-                                <DataGridTextColumn
-                                    Width="110"
-                                    Binding="{Binding Path=Title}"
-                                    Header="загальна реакція" />
-                                <DataGridTextColumn
-                                    Width="100"
-                                    Binding="{Binding Path=Title}"
-                                    Header="протипоказання" />
+                                <DataGridTextColumn Width="100" Header="місцева реакція" />
+                                <DataGridTextColumn Width="110" Header="загальна реакція" />
+                                <DataGridTextColumn Width="100" Header="протипоказання" />
                             </DataGrid.Columns>
                         </DataGrid>
-
                     </Grid>
                 </TabItem.Content>
             </TabItem>
@@ -786,24 +770,22 @@
                     </StackPanel>
                 </TabItem.Header>
                 <TabItem.Content>
-                    <Grid>
-                        <ListView
-                            x:Name="listView42_2"
-                            Width="1000"
-                            Height="108"
-                            Margin="5,3,0,0"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn Width="420" DisplayMemberBinding="{Binding Path=Title}">Найменування обстеження</GridViewColumn>
-                                    <GridViewColumn Width="160" DisplayMemberBinding="{Binding Path=Title}">дата проведення</GridViewColumn>
-                                    <GridViewColumn Width="255" DisplayMemberBinding="{Binding Path=Title}">Висновок</GridViewColumn>
-                                    <GridViewColumn Width="120" DisplayMemberBinding="{Binding Path=Title}">Лікар</GridViewColumn>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                    </Grid>
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridComboBoxColumn Header="Найменування обстеження" SelectedItemBinding="{Binding Path=survey_table, Mode=TwoWay}" />
+                            <DataGridTemplateColumn
+                                x:Name="data5"
+                                Width="120"
+                                Header="Дата">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding data5}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Width="*" Header="Результати" />
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </TabItem.Content>
             </TabItem>
             <TabItem>
@@ -819,7 +801,7 @@
                 <TabItem.Content>
                     <Grid>
                         <DataGrid
-                            x:Name="dataGrid1"
+                            x:Name="bolnich"
                             Width="990"
                             Height="385"
                             Margin="10,10,0,0"
@@ -839,14 +821,14 @@
                                     Width="150"
                                     Binding="{Binding Path=Title}"
                                     Header="Дата закриття" />
-                                <DataGridTextColumn
+                                <DataGridComboBoxColumn
                                     Width="400"
-                                    Binding="{Binding Path=Title}"
-                                    Header="Заключний діагноз" />
-                                <DataGridTextColumn
+                                    Header="Заключний діагноз"
+                                    SelectedItemBinding="{Binding Path=diagnosis_table, Mode=TwoWay}" />
+                                <DataGridComboBoxColumn
                                     Width="150"
-                                    Binding="{Binding Path=Title}"
-                                    Header="Лікар" />
+                                    Header="Лікар"
+                                    SelectedItemBinding="{Binding Path=personal, Mode=TwoWay}" />
                             </DataGrid.Columns>
                         </DataGrid>
 
@@ -864,26 +846,22 @@
                     </StackPanel>
                 </TabItem.Header>
                 <TabItem.Content>
-                    <Grid>
-                        <ListView
-                            x:Name="listView2_2"
-                            Width="1000"
-                            Height="108"
-                            Margin="5,3,0,0"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn Width="135" DisplayMemberBinding="{Binding Path=Title}">Дата</GridViewColumn>
-                                    <GridViewColumn Width="320" DisplayMemberBinding="{Binding Path=Title}">
-                                        Найменування
-                                        закладу охорони здоров’я, відділення
-                                    </GridViewColumn>
-                                    <GridViewColumn Width="535" DisplayMemberBinding="{Binding Path=Title}">Заключний діагноз</GridViewColumn>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                    </Grid>
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn
+                                x:Name="data6"
+                                Width="120"
+                                Header="Дата">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding data6}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridComboBoxColumn Header="Найменування закладу охорони здоров’я, відділення" SelectedItemBinding="{Binding Path=hospitals, Mode=TwoWay}" />
+                            <DataGridComboBoxColumn Header="ЗАКЛЮЧНИЙ ДІАГНОЗ" SelectedItemBinding="{Binding Path=diagnosis_table, Mode=TwoWay}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </TabItem.Content>
             </TabItem>
             <TabItem>
@@ -897,26 +875,28 @@
                     </StackPanel>
                 </TabItem.Header>
                 <TabItem.Content>
-                    <Grid>
-                        <ListView
-                            x:Name="listView26_2"
-                            Width="1000"
-                            Height="108"
-                            Margin="5,3,0,0"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn Width="135" DisplayMemberBinding="{Binding Path=Title}">Дата</GridViewColumn>
-                                    <GridViewColumn Width="320" DisplayMemberBinding="{Binding Path=Title}">
-                                        Найменування
-                                        закладу охорони здоров’я, відділення
-                                    </GridViewColumn>
-                                    <GridViewColumn Width="535" DisplayMemberBinding="{Binding Path=Title}">Заключний діагноз</GridViewColumn>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                    </Grid>
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn
+                                x:Name="data7"
+                                Width="120"
+                                Header="Дата">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <DatePicker SelectedDate="{Binding data7}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridComboBoxColumn
+                                Width="*"
+                                Header="Найменування закладу охорони здоров’я, відділення"
+                                SelectedItemBinding="{Binding Path=hospitals, Mode=TwoWay}" />
+                            <DataGridComboBoxColumn
+                                Width="*"
+                                Header="ЗАКЛЮЧНИЙ ДІАГНОЗ"
+                                SelectedItemBinding="{Binding Path=diagnosis_table, Mode=TwoWay}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </TabItem.Content>
             </TabItem>
             <TabItem>
