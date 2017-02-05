@@ -1613,63 +1613,39 @@
                             FontWeight="Bold" />
                         <GroupBox
                             x:Name="groupBox52"
-                            Width="471"
-                            Height="149"
+                            Width="269"
+                            Height="52"
                             Margin="10,60,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Header="основний">
-                            <TextBlock
-                                x:Name="textBlock17"
-                                Width="445"
-                                Height="112"
-                                Margin="7,5,0,0"
-                                HorizontalAlignment="Left"
-                                VerticalAlignment="Top"
-                                Text="TextBlock"
-                                TextWrapping="Wrap" />
+                            <ComboBox x:Name="comboBox25" HorizontalAlignment="Left" Height="24" Margin="10,0,0,0" VerticalAlignment="Top" Width="235"/>
                         </GroupBox>
                         <GroupBox
                             x:Name="groupBox53"
-                            Width="505"
-                            Height="149"
-                            Margin="495,60,0,0"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top"
-                            Header="ускладнення основного">
-                            <TextBlock
-                                x:Name="textBlock18"
-                                Width="481"
-                                Height="115"
-                                Margin="6,4,0,0"
-                                HorizontalAlignment="Left"
-                                VerticalAlignment="Top"
-                                Text="TextBlock"
-                                TextWrapping="Wrap" />
-                        </GroupBox>
-                        <GroupBox
-                            x:Name="groupBox54"
-                            Width="471"
-                            Height="157"
+                            Width="269"
+                            Height="52"
                             Margin="10,209,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
+                            Header="ускладнення основного">
+                            <ComboBox x:Name="comboBox27" HorizontalAlignment="Left" Height="23" Margin="10,4,0,0" VerticalAlignment="Top" Width="237"/>
+                        </GroupBox>
+                        <GroupBox
+                            x:Name="groupBox54"
+                            Width="269"
+                            Height="59"
+                            Margin="10,126,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
                             Header="супутній">
-                            <TextBlock
-                                x:Name="textBlock19"
-                                Width="446"
-                                Height="123"
-                                Margin="7,4,0,0"
-                                HorizontalAlignment="Left"
-                                VerticalAlignment="Top"
-                                Text="TextBlock"
-                                TextWrapping="Wrap" />
+                            <ComboBox x:Name="comboBox26" HorizontalAlignment="Left" Height="26" Margin="10,4,0,0" VerticalAlignment="Top" Width="235"/>
                         </GroupBox>
                         <GroupBox
                             x:Name="groupBox55"
                             Width="505"
                             Height="157"
-                            Margin="495,209,0,0"
+                            Margin="385,70,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Header="Лікування">
@@ -1687,7 +1663,7 @@
                             x:Name="groupBox56"
                             Width="471"
                             Height="182"
-                            Margin="10,366,0,0"
+                            Margin="19,277,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Header="Лікувальні та трудові рекомендації">
@@ -1703,67 +1679,19 @@
                         </GroupBox>
                         <GroupBox
                             x:Name="groupBox57"
-                            Width="505"
-                            Height="93"
-                            Margin="495,366,0,0"
+                            Width="285"
+                            Height="61"
+                            Margin="572,247,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Header="Ефективність лікування">
-                            <Grid
-                                Width="493"
-                                Height="64"
-                                Margin="2,2,-2,0"
-                                HorizontalAlignment="Left"
-                                VerticalAlignment="Top">
-                                <RadioButton
-                                    x:Name="radioButton20"
-                                    Margin="10,6,0,0"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Top"
-                                    Content="виписаний з одужанням "
-                                    GroupName="vyp" />
-                                <RadioButton
-                                    x:Name="radioButton21"
-                                    Margin="10,25,0,0"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Top"
-                                    Content="виписаний з поліпшенням"
-                                    GroupName="vyp" />
-                                <RadioButton
-                                    x:Name="radioButton22"
-                                    Margin="10,45,0,0"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Top"
-                                    Content="виписаний з погіршенням"
-                                    GroupName="vyp" />
-                                <RadioButton
-                                    x:Name="radioButton23"
-                                    Margin="203,6,0,0"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Top"
-                                    Content="виписаний без змін"
-                                    GroupName="vyp" />
-                                <RadioButton
-                                    x:Name="radioButton24"
-                                    Margin="203,25,0,0"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Top"
-                                    Content="помер"
-                                    GroupName="vyp" />
-                                <RadioButton
-                                    x:Name="radioButton25"
-                                    Margin="203,45,0,0"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Top"
-                                    Content="переведений"
-                                    GroupName="vyp" />
-                            </Grid>
+                            <ComboBox x:Name="comboBox12" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" VerticalAlignment="Top" Width="245"/>
                         </GroupBox>
                         <GroupBox
                             x:Name="groupBox58"
                             Width="505"
                             Height="89"
-                            Margin="495,459,0,0"
+                            Margin="495,324,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Header="GroupBox">
@@ -1818,7 +1746,7 @@
                             x:Name="groupBox59"
                             Width="181"
                             Height="93"
-                            Margin="10,548,0,0"
+                            Margin="506,445,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Header="Огляд на коросту">
@@ -1848,7 +1776,7 @@
                             x:Name="groupBox60"
                             Width="162"
                             Height="93"
-                            Margin="196,548,0,0"
+                            Margin="770,445,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Header="Огляд на педикульоз">
@@ -1873,22 +1801,6 @@
                                     Content="Ні"
                                     GroupName="ped" />
                             </Grid>
-                        </GroupBox>
-                        <GroupBox
-                            x:Name="groupBox61"
-                            Width="232"
-                            Height="93"
-                            Margin="375,548,0,0"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top"
-                            Header="З режимом дня та забороною&#xD;&#xA;паління ознайомлений&#xD;&#xA;">
-                            <ComboBox
-                                x:Name="comboBox12"
-                                Width="196"
-                                Height="25"
-                                Margin="10,0,0,0"
-                                HorizontalAlignment="Left"
-                                VerticalAlignment="Top" />
                         </GroupBox>
 
                     </Grid>

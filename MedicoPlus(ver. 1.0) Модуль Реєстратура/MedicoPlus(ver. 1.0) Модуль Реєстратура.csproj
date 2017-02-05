@@ -74,6 +74,50 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="acard.cs" />
+    <Compile Include="aids.cs" />
+    <Compile Include="anestic_type.cs" />
+    <Compile Include="areas.cs" />
+    <Compile Include="bloodtypes.cs" />
+    <Compile Include="blood_transfusion.cs" />
+    <Compile Include="capacity.cs" />
+    <Compile Include="cause_off.cs" />
+    <Compile Include="cities.cs" />
+    <Compile Include="compositions.cs" />
+    <Compile Include="currency.cs" />
+    <Compile Include="dairy.cs" />
+    <Compile Include="departments.cs" />
+    <Compile Include="deseases_table.cs" />
+    <Compile Include="diabetes.cs" />
+    <Compile Include="diagnosis.cs" />
+    <Compile Include="diagnosis_table.cs" />
+    <Compile Include="dispgroup.cs" />
+    <Compile Include="drugs.cs" />
+    <Compile Include="effectiv_table.cs" />
+    <Compile Include="epikriz.cs" />
+    <Compile Include="graft.cs" />
+    <Compile Include="graft_table.cs" />
+    <Compile Include="hospitalization.cs" />
+    <Compile Include="hospitals.cs" />
+    <Compile Include="infectious_deseases.cs" />
+    <Compile Include="insurance.cs" />
+    <Compile Include="intolerance.cs" />
+    <Compile Include="invalid.cs" />
+    <Compile Include="kontingent.cs" />
+    <Compile Include="manufacturers.cs" />
+    <Compile Include="medical_offices.cs" />
+    <Compile Include="medresults.cs" />
+    <Compile Include="mkh.cs" />
+    <Compile Include="MySQL.cs" />
+    <Compile Include="oncology_table.cs" />
+    <Compile Include="patients.cs" />
+    <Compile Include="personal.cs" />
+    <Compile Include="plan.cs" />
+    <Compile Include="profosmotr.cs" />
+    <Compile Include="profosmotr_table.cs" />
+    <Compile Include="regions.cs" />
+    <Compile Include="registration_off.cs" />
+    <Compile Include="registration_on.cs" />
     <Compile Include="Registry\CreateCard.xaml.cs">
       <DependentUpon>CreateCard.xaml</DependentUpon>
     </Compile>
@@ -95,7 +139,20 @@
     <Compile Include="Registry\Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
-    <Compile Include="user.cs" />
+    <Compile Include="rh.cs" />
+    <Compile Include="rules.cs" />
+    <Compile Include="sex.cs" />
+    <Compile Include="sickleave.cs" />
+    <Compile Include="specialist.cs" />
+    <Compile Include="stcard.cs" />
+    <Compile Include="surgery.cs" />
+    <Compile Include="surgery_table.cs" />
+    <Compile Include="transfer.cs" />
+    <Compile Include="units.cs" />
+    <Compile Include="unitsgroup.cs" />
+    <Compile Include="users.cs" />
+    <Compile Include="ward.cs" />
+    <Compile Include="zagostr.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -138,7 +195,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MySQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

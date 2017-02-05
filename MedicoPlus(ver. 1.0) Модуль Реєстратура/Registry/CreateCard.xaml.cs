@@ -19,10 +19,22 @@ namespace MedicoPlus_ver._1._0__Модуль_Реєстратура.Registry
     /// </summary>
     public partial class CreateCard : Window
     {
+
+        MySQL db = new MySQL();
+        private DateTime data;
         public CreateCard()
         {
             InitializeComponent();
-            
+
         }
+
+        private void save_Click(object sender, RoutedEventArgs e)
+        {
+            string fullname = surname + " " + name + " " + lastname;
+            data = (DateTime) birthday.SelectedDate;
+        }
+
+        
+       
     }
 }

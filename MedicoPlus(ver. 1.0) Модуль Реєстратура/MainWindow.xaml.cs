@@ -48,10 +48,10 @@ namespace MedicoPlus_ver._1._0__Модуль_Реєстратура
             var users = db.users;
             try
             {
-                foreach (user u in users)
+                foreach (users u in users)
                 {
 
-                    if (login.Text.Equals(u.login) && password.Password.Equals(u.pwd))
+                    if (login.Text.Equals(u.login) && password.Password.Equals(u.password))
                     {
                         //userAccess = u.rules; пока закрыто, данные в другой базе
                         Shell shell = new Shell();

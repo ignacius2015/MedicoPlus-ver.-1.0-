@@ -6,17 +6,18 @@ namespace MedicoPlus_ver._1._0__Модуль_Реєстратура
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("requiem.users")]
-    public partial class user
+    [Table("medico.aids")]
+    public partial class aids
     {
         public int id { get; set; }
 
-        [Required]
-        [StringLength(15)]
-        public string login { get; set; }
+        public bool? result { get; set; }
 
-        [Required]
-        [StringLength(100)]
-        public string pwd { get; set; }
+        public int patient_id { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime data { get; set; }
+
+        public virtual patients patients { get; set; }
     }
 }
